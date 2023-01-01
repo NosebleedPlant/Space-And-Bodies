@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PP_FauxCrushingArtifact
+  m_Name: FauxCrushingArtifact
   m_Shader: {fileID: -6465566751694194690, guid: 7d481371011b69849ab1af5c7315f4f2, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []

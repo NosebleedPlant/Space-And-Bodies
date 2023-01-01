@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dea88b8bfbd93941b433ee338a4192d, type: 3}
   m_Name: Room BG 00
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   settings:
     Event: 250
     blitMaterial: {fileID: 2100000, guid: e40a91f162dd6334c9a51a9301083905, type: 2}
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
   m_Name: Render Subject
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   settings:
     passTag: Render Subject
     Event: 300
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95080a69c6754a747ae7acbc4284fd32, type: 3}
   m_Name: ComputeShaderRenderingTest
   m_EditorClassIdentifier: 
-  m_Active: 0
+  m_Active: 1
   material: {fileID: 0}
   computeShader: {fileID: 7200000, guid: a9f86a6f1f439154b85e5e8766ea6bd1, type: 3}
 --- !u!114 &6452632156708351545
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dea88b8bfbd93941b433ee338a4192d, type: 3}
   m_Name: Solitaire Effect
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   settings:
     Event: 300
     blitMaterial: {fileID: 2100000, guid: 38a1782b05dd5504ab148af9ca1e1070, type: 2}
