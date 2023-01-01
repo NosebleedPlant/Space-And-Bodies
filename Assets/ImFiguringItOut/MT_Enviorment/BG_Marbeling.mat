@@ -44,7 +44,7 @@ Material:
     m_Floats:
     - _BlackMask: 0.43
     - _ColorMapStrength: 2.69
-    - _MapStrength: 1.55
+    - _MapStrength: 2.5
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SimpleNoise_Scale: 38.6

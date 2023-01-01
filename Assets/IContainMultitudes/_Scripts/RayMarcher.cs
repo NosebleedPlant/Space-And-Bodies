@@ -13,8 +13,7 @@ public class RayMarcher : ScriptableRendererFeature
         [Range(1,16)] public float fractalPower= 4.44f;
         public bool animate = false;
         
-        [Header("Light")] 
-        [HideInInspector] public Transform lightTransform;
+        [Header("Light")]
         public Vector3 lightPos;
         public Vector3 lightForward;
         public float intensity;
