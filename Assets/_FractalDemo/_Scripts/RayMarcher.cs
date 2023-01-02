@@ -4,6 +4,9 @@ using UnityEngine.Rendering.Universal;
 
 public class RayMarcher : ScriptableRendererFeature
 {
+    /// <summary>
+    /// This class holds parameters for the compute shader
+    /// </summary>
     [System.Serializable]
     public class Settings
     {
@@ -36,10 +39,12 @@ public class RayMarcher : ScriptableRendererFeature
     public static int ObjectCount = 15;
     public static Vector4[] ObjectPositions = new Vector4[ObjectCount];
         
-    
     private RenderPass _renderPass;
+    
+    //implements Create() function of ScriptableRendererFeature
     public override void Create()
     {
+        //ensure that fractal animates when in build
 #if !UNITY_EDITOR
         settings.animate = true;
         settings.fractalPower = 4.44f;
@@ -47,9 +52,10 @@ public class RayMarcher : ScriptableRendererFeature
         this._renderPass = new RenderPass(settings);
     }
 
+    //implements AddRenderPasses() function of ScriptableRendererFeature
     public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
     {
-        _renderPass.SetSource(renderer.cameraColorTarget);
+        _renderPass.SetTarget(renderer.cameraColorTarget);
         renderer.EnqueuePass(_renderPass);
         
     }
@@ -58,7 +64,7 @@ public class RayMarcher : ScriptableRendererFeature
     {
         private Settings _settings;
         private readonly ComputeShader _computeShader;
-        private RenderTargetIdentifier _source;
+        private RenderTargetIdentifier _target;
         private RenderTexture _bufferTex;
         
         //animation
@@ -67,6 +73,13 @@ public class RayMarcher : ScriptableRendererFeature
         private float _startVal = 4.44f;
         private float _endVal = 16;
         
+        //camara
+        private Camera _camera;
+        
+        /// <summary>
+        /// constructor for the render pass also assigns values to the material.
+        /// </summary>
+        /// <param name="settings"></param>
         public RenderPass(Settings settings)
         {
             renderPassEvent = settings.renderPassEvent;
@@ -74,16 +87,22 @@ public class RayMarcher : ScriptableRendererFeature
             _settings = settings;
         }
 
-        private Camera _camera;
-        public void SetSource(RenderTargetIdentifier source)
+        /// <summary>
+        /// sets the target texture of the render pass. Typically this is the camera's tex.
+        /// </summary>
+        /// <param name="target"></param>
+        public void SetTarget(RenderTargetIdentifier target)
         {
-            _source = source;
+            _target = target;
         }
 
+        //implements the Execute function of ScriptableRenderPass called before render
         public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
         {
             CommandBuffer cmd = CommandBufferPool.Get("Ray march Fractal");
             _camera = Camera.main;
+            
+            //create the buffer render tex to hold info from the compute shader
             if(_bufferTex == null || _bufferTex.width!=Screen.width || _bufferTex.height != Screen.height) 
             {
                 if (_bufferTex != null)
@@ -99,20 +118,27 @@ public class RayMarcher : ScriptableRendererFeature
                 _bufferTex.enableRandomWrite = true;
                 _bufferTex.Create();
             }
+            //assing buffer to compute shader
             _computeShader.SetTexture(0, "Result", _bufferTex);
 
+            //animate the fractal by manipulating the fractal power
             if(_settings.animate)
                 AnimateFractal();
             
+            //set parameters of the compute shader
             SetSceneParams();
             SetLightingParams();
             SetCameraParams();
             
+            //dispatch compute shader
             int threadGroupsX = Mathf.CeilToInt(Screen.width / 8.0f);
             int threadGroupsY = Mathf.CeilToInt(Screen.height / 8.0f);
             _computeShader.Dispatch(0, threadGroupsX, threadGroupsY, 1);
-            Blit(cmd,new RenderTargetIdentifier(_bufferTex),_source);
+            
+            //blit buffer to the target, in this case the camera's tex
+            Blit(cmd,new RenderTargetIdentifier(_bufferTex),_target);
 
+            //excute
             context.ExecuteCommandBuffer(cmd);
             CommandBufferPool.Release(cmd);
         }
@@ -129,6 +155,8 @@ public class RayMarcher : ScriptableRendererFeature
             }
         }
         
+
+        //paramets setting helpers:
         private void SetSceneParams() 
         {
             _computeShader.SetVector("_BGColorA", new Vector4(_settings.bgColorA.r, _settings.bgColorA.g, _settings.bgColorA.b, _settings.bgColorA.a));
@@ -160,6 +188,4 @@ public class RayMarcher : ScriptableRendererFeature
             _computeShader.SetMatrix("_CameraInverseProjection", _camera.projectionMatrix.inverse);
         } 
     }
-    
-    
 }

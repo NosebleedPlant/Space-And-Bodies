@@ -71,7 +71,7 @@ Material:
     - _Roll_Variation: 1.8
     - _Scanline_Opacity: 0.5
     - _Scanline_Width: 0.03
-    - _Tearing_Frequency: 0.6
+    - _Tearing_Frequency: 1.03
     - _Width: 0.93
     m_Colors:
     - _Frame_Color: {r: 0.001557493, g: 0.007265301, b: 0.066037714, a: 0}

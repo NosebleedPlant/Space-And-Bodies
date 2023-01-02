@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_DEV/_Home.unity
+    path: Assets/_HomeAndGlobal/_Home.unity
     guid: 41ff4dc51a7166449a48f63056b22e9c
   - enabled: 1
     path: Assets/_FractalDemo/_Scene.unity
@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_ShaderDemos/_Scenes/Scene03.unity
     guid: 3ac20fd69c350ed4494e663654494630
-  - enabled: 1
+  - enabled: 0
     path: Assets/_ShaderDemos/_Scenes/Scene04.unity
     guid: 61f9f8090249b464d8c1d42c5fc3f9b7
   m_configObjects: {}

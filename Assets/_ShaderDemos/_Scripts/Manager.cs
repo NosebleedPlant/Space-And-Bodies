@@ -23,12 +23,16 @@ public class Manager : MonoBehaviour
         _originalRotation = _endRotation = _camera.rotation;
         _timer = returnTime;
     }
-    
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            StartCoroutine(LoadYourAsyncScene());
+            StartCoroutine(LoadYourAsyncScene(nextScene));
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            StartCoroutine(LoadYourAsyncScene("_Home")); 
         }
         else if (Input.GetMouseButton(0))
         {
@@ -46,9 +50,9 @@ public class Manager : MonoBehaviour
     }
     
     //async load the next scene
-    private IEnumerator LoadYourAsyncScene()
+    private IEnumerator LoadYourAsyncScene(string scene)
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextScene);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene);
         while (!asyncLoad.isDone)
         {
             yield return null;

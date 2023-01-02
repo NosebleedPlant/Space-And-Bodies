@@ -15,16 +15,16 @@ MonoBehaviour:
   m_Active: 1
   settings:
     Event: 300
-    blitMaterial: {fileID: 2100000, guid: fb7f753002b28ef46821a29d3cef9c77, type: 2}
+    blitMaterial: {fileID: 2100000, guid: badf70214dc17b948b2c688f9770ab63, type: 2}
     blitMaterialPassIndex: 0
     setInverseViewMatrix: 0
     requireDepthNormals: 0
     srcType: 0
     srcTextureId: _CameraColorTexture
     srcTextureObject: {fileID: 0}
-    dstType: 0
+    dstType: 2
     dstTextureId: _BlitPassTexture
-    dstTextureObject: {fileID: 0}
+    dstTextureObject: {fileID: 8400000, guid: 82ce23ec222cb854bbd4eec5fdc2295e, type: 2}
     overrideGraphicsFormat: 0
     graphicsFormat: 4
 --- !u!114 &11400000
@@ -37,7 +37,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de640fe3d0db1804a85f9fc8f5cadab6, type: 3}
-  m_Name: Scene 04
+  m_Name: FauxSorting Renderer
   m_EditorClassIdentifier: 
   debugShaders:
     debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7, type: 3}

@@ -7,13 +7,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_New Shader Graph
+  m_Name: Tex2CamSorting
   m_Shader: {fileID: -6465566751694194690, guid: 8719ef78395afae4cab6c558ceff7924, type: 3}
-  m_ValidKeywords:
-  - _REQUIRE_DEPTH_TEXTURE
+  m_ValidKeywords: []
   m_InvalidKeywords:
-  - REQUIRE_DEPTH_TEXTURE
-  - REQUIRE_DEPTH_TEXTUREREQUIRE_DEPTH_TEXTURE
+  - _REQUIRE_DEPTH_TEXTURE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -25,6 +23,10 @@ Material:
     m_TexEnvs:
     - _MainTex:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 8400000, guid: 82ce23ec222cb854bbd4eec5fdc2295e, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -41,18 +43,23 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - REQUIRE_DEPTH_TEXTURE: 1
-    - _Depth_Strength: 1
-    - _Depth_Thickness: 1
-    - _Depth_Threshold: 1
+    - _Depth_Strength: 0.46
+    - _Depth_Thickness: 0.19
+    - _Depth_Threshold: -0.39
+    - _Float: 0.05
+    - _Max: 1
+    - _Min: -1
+    - _Offset: -5.2
     - _QueueControl: 0
     - _QueueOffset: 0
     - _REQUIRE_DEPTH_TEXTURE: 1
-    - _Thickness: -3.44
+    - _Thickness: 0.61
+    - _speed: 0.01
+    - _yCount: -219.53
     m_Colors:
-    - _Outline_Color: {r: 0, g: 0, b: 0, a: 0}
+    - _Outline_Color: {r: 1, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &4825232959772875687
+--- !u!114 &711677505656276107
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

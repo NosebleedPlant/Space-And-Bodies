@@ -1,45 +1,42 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using Vector2 = System.Numerics.Vector2;
+using UnityEngine.SceneManagement;
 
 public class CameraControl : MonoBehaviour
 {
-    [SerializeField] private float sensitivity = 30;
-    [SerializeField] private float returnTime = 10;
-    private Quaternion _origialRotation;
-    private Quaternion _endRotaion;
-    private float _timer = 0;
+    [SerializeField] private float lookSensitivity = 30;
+    [SerializeField] private float moveSensitivity = 10;
+
+    private Vector3 _originalPos;
+    private Quaternion _originalRot;
 
     private void Start()
     {
-        _origialRotation = _endRotaion = transform.rotation;
-        _timer = returnTime;
+        _originalPos = transform.position;
+        _originalRot = transform.rotation;
     }
-    
+
     private void Update()
     {
+        Vector2 magnitude = new Vector2(Input.GetAxisRaw("Horizontal"), -Input.GetAxis("Vertical"));
+        Move(magnitude);
 
-        if (Input.GetMouseButton(1))
-        {
+        //handle rotation input
+        if (Input.GetMouseButton(0))
             Rotate();
-            _timer = 0;
-        }
-        else if(_timer<=returnTime)
+        
+        if (Input.GetKeyDown(KeyCode.R)) 
         {
-            _timer += Time.deltaTime;
-            transform.rotation = Quaternion.Lerp(
-                _endRotaion,
-                _origialRotation,
-                Mathf.SmoothStep(0,1,_timer/returnTime));
+            transform.position = _originalPos;
+            transform.rotation = _originalRot;
         }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+            StartCoroutine(LoadYourAsyncScene());
     }
     
     private void Rotate()
     {
-        float magnitude = Time.deltaTime * sensitivity;
+        float magnitude = Time.deltaTime * lookSensitivity;
 
         float angleX = magnitude * Input.GetAxisRaw("Mouse X");
         float angleY = magnitude * Input.GetAxisRaw("Mouse Y");
@@ -48,7 +45,23 @@ public class CameraControl : MonoBehaviour
         Quaternion pitch = Quaternion.Euler(-angleY, 0f, 0f);
         
         Quaternion rotation = yaw * transform.rotation;
-        _endRotaion = rotation * pitch;
-        transform.rotation = _endRotaion;
+
+        //set calculated rotation
+        transform.rotation = rotation * pitch;
+    }
+    private void Move(Vector2 magnitude)
+    {
+        magnitude *= moveSensitivity * Time.deltaTime;
+        Vector3 displacement = transform.right * magnitude.x - transform.forward * magnitude.y;
+        transform.position += displacement;
+    }
+
+    private IEnumerator LoadYourAsyncScene()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("_Home");
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
     }
 }
