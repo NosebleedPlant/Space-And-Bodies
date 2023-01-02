@@ -6,6 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/IContainMultitudes/_Scene.unity
+    path: Assets/_DEV/_Home.unity
+    guid: 41ff4dc51a7166449a48f63056b22e9c
+  - enabled: 1
+    path: Assets/_FractalDemo/_Scene.unity
     guid: 0dc0e2cdc1c70b141bf67c17c399e12f
+  - enabled: 1
+    path: Assets/_ShaderDemos/_Scenes/Scene00.unity
+    guid: 81b83e5f7b7d175489e1bad972b496ec
+  - enabled: 1
+    path: Assets/_ShaderDemos/_Scenes/Scene01.unity
+    guid: 39767d5f645ffc64dac0208f08c8cfe0
+  - enabled: 1
+    path: Assets/_ShaderDemos/_Scenes/Scene02.unity
+    guid: 95578b86769f0474a9f4a736ba131c99
+  - enabled: 1
+    path: Assets/_ShaderDemos/_Scenes/Scene03.unity
+    guid: 3ac20fd69c350ed4494e663654494630
+  - enabled: 1
+    path: Assets/_ShaderDemos/_Scenes/Scene04.unity
+    guid: 61f9f8090249b464d8c1d42c5fc3f9b7
   m_configObjects: {}

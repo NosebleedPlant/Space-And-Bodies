@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1287234635904542326
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FauxPixelSortingArtifacts
+  m_Shader: {fileID: -6465566751694194690, guid: ee4d7028020e28c44b3a29c48510b994, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_84d6e59719f3454aa8067a4144360c8b_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 3b70709c6d106ff4fa54cf226d6fd127, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_ef9dda7440c4405dba471c23954f5d2a_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 3b70709c6d106ff4fa54cf226d6fd127, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _DistortionMask: 0.314
+    - _Distortion_Strength: -55.7
+    - _Float: 0.763
+    - _Mask: 0.329
+    - _Mask1: 0.007
+    - _Mask2: 0.044
+    - _MaskFinal: 0
+    - _MaskX: 0
+    - _MaskY: 0.001
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Speed: 0.001
+    - _Strength: -119
+    - _StrengthX: -62.4
+    - _StrengthY: -29.56
+    m_Colors:
+    - _PixelDimensions: {r: 40, g: 40, b: 0, a: 0}
+  m_BuildTextureStacks: []
