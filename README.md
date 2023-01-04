@@ -4,7 +4,7 @@
 Space and Bodies was a collection of art works that I made from Sep-Dec 2022. They are an exploration of various anxieties and an attempt at reconciliation with different facets that define me. It was meant for display at the UAlberta DSC therefore [Re;] provides a version of the original collection that has been adapted to a more accessable format and also provides demo scenes showing off enhanced versions of the various shaders and render features I developed for this project. [Re;] is split into three sections
   1. Fractal Demo Scene
   2. Shader Demo Scene
-  3. Gallery Scnee (Waiting on the recorded footage from the DSC to make this available, sorry).
+  3. Gallery Scnee (Waiting on the recorded footage from the DSC to make this available, sorry.).
 
 ## Fractal Demo Scene
 This fractal explorere originally was made in unity BRP as part of a interactive art work for the 4k touch table at the DSC in the University of Alberta. The work, titled "I contain Multitudes", supported multi touch controls and a video of it in action is available in the gallery scene. For [Re;] I ported re-implemented the code in unity's Universal Render Pipeline
@@ -22,7 +22,12 @@ https://user-images.githubusercontent.com/42461443/210475242-356a1617-8385-4263-
 
 
 ## Shader Demo Scene
+Alot of these shaders were developed initally during exprementation for a video art peice titled "I'm figuring it out". In [Re;] I refined the the shaders and explored ways to improve their effectiveness by utalizing custom render features. A short discussion on each effect is avilable under the file/folder structure section.
 
+### File/Folder Structure
+![test-Page-2](https://user-images.githubusercontent.com/42461443/210497577-81372db4-0d39-4166-8259-597de543c253.svg)
+
+### File/Folder Structure
 https://user-images.githubusercontent.com/42461443/210475250-82ee6abe-5461-4069-8cc3-c3233d866e8d.mp4
 
 https://user-images.githubusercontent.com/42461443/210475254-8f36ef62-1b38-440a-a306-bb8d9fec8fec.mp4
@@ -33,8 +38,12 @@ https://user-images.githubusercontent.com/42461443/210475271-d06acbab-bbcb-4ee8-
 
 ## References and Resources
 [GPU Ray Tracing in Unity – Part 1](http://blog.three-eyed-games.com/2018/05/03/gpu-ray-tracing-in-unity-part-1/)
+
 [Ray Marching and Signed Distance Functions](https://jamie-wong.com/2016/07/15/ray-marching-signed-distance-functions/#the-raymarching-algorithm)
+
 [Distance Estimated 3D Fractals (V): The Mandelbulb & Different DE Approximations](http://blog.hvidtfeldts.net/index.php/2011/09/distance-estimated-3d-fractals-v-the-mandelbulb-different-de-approximations/)
+
 [smooth minimum](https://www.iquilezles.org/www/articles/smin/smin.htm)
+
 [Coding Adventure: Ray Marching](https://youtu.be/Cp5WWtMoeKg)
 
