@@ -1,7 +1,7 @@
 # [Re:]Space-And-Bodies
 
 ### About
-Space and Bodies was a collection of art works that I made from Sep-Dec 2022. They are an exploration of various anxieties and an attempt at reconciliation with different facets that define me. It was meant for display at the UAlberta DSC therefore [Re;] provides a version of the original collection that has been adapted to a more accessable format and also provides demo scenes showing off enhanced versions of the various shaders and render features I developed for this project. [Re:] is split into three sections
+Space and Bodies was a collection of art works that I made from Sep-Dec 2022. They are an exploration of various anxieties and an attempt at reconciliation with different facets that define me. It was meant for display at the UAlberta DSC therefore [Re:] provides a version of the original collection that has been adapted to a more accessable format and also provides demo scenes showing off enhanced versions of the various shaders and render features I developed for this project. [Re:] is split into three sections
   1. Fractal Demo Scene
   2. Shader Demo Scene
   3. Gallery Scnee (Waiting on the recorded footage from the DSC to make this available, sorry.).
