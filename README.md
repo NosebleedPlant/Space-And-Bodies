@@ -72,3 +72,12 @@ The scene uses a similar approach to scene 01. Two cameras using two sepreate re
 [How to Simulate Smoke with Shaders](https://www.alanzucconi.com/2016/03/09/simulate-smoke-with-shaders/)
 
 [Sorb's effect breakdown](https://twitter.com/SoerbGames/status/1570773880444448773?s=20&t=ifWw_myvdOQhEnu-xWt3eQ)
+
+### Unity RP resources
+[Intro Renderer Feature in Unity URP - Desaturate Post Process Effect](https://www.youtube.com/watch?v=MLl4yzaYMBY&t=1s&ab_channel=NedMakesGames)
+
+[Example: How to create a custom rendering effect using the Render Objects Renderer Feature](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.1/manual/renderer-features/how-to-custom-effect-render-objects.html)
+
+[How to create a custom Renderer Feature](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.1/manual/containers/create-custom-renderer-feature-1.html)
+
+messing with cyan's blit is a great way to learn
