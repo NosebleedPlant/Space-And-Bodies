@@ -42,11 +42,11 @@ Material:
     - _Float_1: 0.2
     - _Float_2: 0.78
     - _Max: 765.37
-    - _Min: 127.1
-    - _Offset: 0
+    - _Min: 126.97
+    - _Offset: 1.45
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _speed: 0.3
+    - _speed: 0.5
     - _yCount: 57
     m_Colors: []
   m_BuildTextureStacks: []
