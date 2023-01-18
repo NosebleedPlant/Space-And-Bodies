@@ -83,5 +83,4 @@ The scene uses a similar approach to scene 01. Two cameras using two sepreate re
 messing with cyan's blit is a great way to learn
 
 ### The awesome audio:
-ranger beats: https://linktr.ee/rangerbts
 [ranger beats](https://linktr.ee/rangerbts)
