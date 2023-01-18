@@ -81,3 +81,7 @@ The scene uses a similar approach to scene 01. Two cameras using two sepreate re
 [How to create a custom Renderer Feature](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.1/manual/containers/create-custom-renderer-feature-1.html)
 
 messing with cyan's blit is a great way to learn
+
+### The awesome audio:
+ranger beats: https://linktr.ee/rangerbts
+[ranger beats](https://linktr.ee/rangerbts)
